@@ -30,4 +30,9 @@ publishing {
             credentials(PasswordCredentials::class)
         }
     }
+    publications {
+        register<MavenPublication>("maven") {
+            from(components["java"])
+        }
+    }
 }
